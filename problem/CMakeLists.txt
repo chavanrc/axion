@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.17)
+
+project(balancing_scale)
+
+set(CMAKE_CXX_STANDARD 20)
+
+file(GLOB HEADER_FILES include/*.hpp)
+
+file(GLOB SOURCE_FILES src/*.cpp)
+
+add_library(${PROJECT_NAME} STATIC ${HEADER_FILES} ${SOURCE_FILES})
+
+target_include_directories(${PROJECT_NAME} PRIVATE include)

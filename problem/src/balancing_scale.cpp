@@ -127,8 +127,16 @@ namespace balancing_scale {
                 std::cout << name << ',' << root->left_delta_ << ',' << root->right_delta_ << '\n';
             }
         }
-
         PrintPreorder(root->left_);
         PrintPreorder(root->right_);
+    }
+
+    void Tree::Clean(Node *root) {
+        if (!root) {
+            return;
+        }
+        Clean(root->left_);
+        Clean(root->right_);
+        delete root;
     }
 }

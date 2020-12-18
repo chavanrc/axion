@@ -28,6 +28,7 @@ namespace balancing_scale {
         std::ofstream writer_;
 
         ~Tree() {
+            Clean(root_);
             if(writer_) {
                 writer_.close();
             }
@@ -40,5 +41,7 @@ namespace balancing_scale {
         size_t Balance(Node *root);
 
         void PrintPreorder(Node *root);
+
+        void Clean(Node *root);
     };
 }

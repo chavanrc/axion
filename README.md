@@ -6,8 +6,11 @@ mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..
 
-To run:
-./balancing_scale
+Sample Input File:
+tests/System.in
 
-Outout:
+To run:
+./problem/balancing_scale
+
+Output:
 System.out
